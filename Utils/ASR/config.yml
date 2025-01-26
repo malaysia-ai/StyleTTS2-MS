@@ -23,7 +23,7 @@ model_params:
    input_dim: 80
    hidden_dim: 256
    n_token: 178
-   token_embedding_dim: 512
+   token_embedding_dim: 256
 
 optimizer_params:
   lr: 0.0005

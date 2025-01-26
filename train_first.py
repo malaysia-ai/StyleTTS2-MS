@@ -83,7 +83,7 @@ def main(config_path):
                                         OOD_data=OOD_data,
                                         min_length=min_length,
                                         batch_size=batch_size,
-                                        num_workers=2,
+                                        num_workers=5,
                                         dataset_config={},
                                         device=device)
 
@@ -129,6 +129,7 @@ def main(config_path):
 
     loss_params = Munch(config['loss_params'])
     TMA_epoch = loss_params.TMA_epoch
+    print('TMA_epoch', TMA_epoch)
     
     for k in model:
         model[k] = accelerator.prepare(model[k])
