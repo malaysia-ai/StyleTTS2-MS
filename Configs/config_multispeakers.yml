@@ -5,7 +5,7 @@ log_interval: 10
 device: "cuda"
 epochs_1st: 50 # number of epochs for first stage training (pre-training)
 epochs_2nd: 30 # number of peochs for second stage training (joint training)
-batch_size: 16
+batch_size: 3
 max_len: 300 # maximum number of frames
 pretrained_model: ""
 second_stage_load_pretrained: true # set to true if the pre-trained model is for 2nd stage
@@ -86,7 +86,7 @@ loss_params:
     
     lambda_mono: 1. # monotonic alignment loss (1st stage, TMA)
     lambda_s2s: 1. # sequence-to-sequence loss (1st stage, TMA)
-    TMA_epoch: 0 # TMA starting epoch (1st stage)
+    TMA_epoch: 2 # TMA starting epoch (1st stage)
 
     lambda_F0: 1. # F0 reconstruction loss (2nd stage)
     lambda_norm: 1. # norm reconstruction loss (2nd stage)

@@ -138,7 +138,12 @@ class FilePathDataset(torch.utils.data.Dataset):
     def _load_tensor(self, data):
         wave_path, text, speaker_id = data
         speaker_id = int(speaker_id)
-        wave, sr = sf.read(osp.join(self.root_path, wave_path))
+        path = osp.join(self.root_path, wave_path)
+        if os.path.exists('/workspace'):
+            splitted = os.path.split(path)
+            new_folder = os.path.join('/workspace', os.path.split(splitted[0])[1])
+            path = os.path.join(new_folder, splitted[1])
+        wave, sr = sf.read()
         if wave.shape[-1] == 2:
             wave = wave[:, 0].squeeze()
         if sr != 24000:
