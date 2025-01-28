@@ -143,6 +143,10 @@ class FilePathDataset(torch.utils.data.Dataset):
             splitted = os.path.split(path)
             new_folder = os.path.join('/workspace', os.path.split(splitted[0])[1])
             path = os.path.join(new_folder, splitted[1])
+        if os.path.exists('/ephemeral'):
+            splitted = os.path.split(path)
+            new_folder = os.path.join('/ephemeral', os.path.split(splitted[0])[1])
+            path = os.path.join(new_folder, splitted[1])
         wave, sr = sf.read()
         if wave.shape[-1] == 2:
             wave = wave[:, 0].squeeze()
