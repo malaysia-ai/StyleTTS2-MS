@@ -147,7 +147,7 @@ class FilePathDataset(torch.utils.data.Dataset):
             splitted = os.path.split(path)
             new_folder = os.path.join('/ephemeral', os.path.split(splitted[0])[1])
             path = os.path.join(new_folder, splitted[1])
-        wave, sr = sf.read()
+        wave, sr = sf.read(path)
         if wave.shape[-1] == 2:
             wave = wave[:, 0].squeeze()
         if sr != 24000:
