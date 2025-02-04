@@ -2,7 +2,7 @@
 
 ### Yinghao Aaron Li, Cong Han, Vinay S. Raghavan, Gavin Mischler, Nima Mesgarani
 
-Original README at https://github.com/yl4579/StyleTTS2
+Original README at https://github.com/yl4579/StyleTTS2, checkpoints at https://huggingface.co/mesolitica/StyleTTS2-MS
 
 ## Pre-trained modules
 In [Utils](Utils) folder, there are three pre-trained models: 

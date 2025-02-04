@@ -5,9 +5,9 @@ log_interval: 10
 device: "cuda"
 epochs_1st: 50 # number of epochs for first stage training (pre-training)
 epochs_2nd: 30 # number of peochs for second stage training (joint training)
-batch_size: 3
+batch_size: 10
 max_len: 300 # maximum number of frames
-pretrained_model: ""
+pretrained_model: "/ephemeral/epoch_1st_00001.pth"
 second_stage_load_pretrained: true # set to true if the pre-trained model is for 2nd stage
 load_only_params: false # set to true if do not want to load epoch numbers and optimizer parameters
 
@@ -17,8 +17,8 @@ ASR_path: "Utils/ASR/epoch_00020.pth"
 PLBERT_dir: 'Utils/PLBERT/'
 
 data_params:
-  train_data: "/home/husein/ssd3/tts/train_list.txt"
-  val_data: "/home/husein/ssd3/tts/val_list.txt"
+  train_data: "/ephemeral/train_list.txt"
+  val_data: "/ephemeral/val_list.txt"
   root_path: ""
   OOD_data: "Data/OOD_texts.txt"
   min_length: 50 # sample until texts with this size are obtained for OOD texts
