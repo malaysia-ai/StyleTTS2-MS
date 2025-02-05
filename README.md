@@ -2,13 +2,13 @@
 
 ### Yinghao Aaron Li, Cong Han, Vinay S. Raghavan, Gavin Mischler, Nima Mesgarani
 
-Original README at https://github.com/yl4579/StyleTTS2, checkpoints at https://huggingface.co/mesolitica/StyleTTS2-MS
+Original README at https://github.com/yl4579/StyleTTS2, checkpoints at https://huggingface.co/malaysia-ai/StyleTTS2-MS
 
 ## Pre-trained modules
 In [Utils](Utils) folder, there are three pre-trained models: 
-- **[ASR](Utils/ASR) folder**: Forked original [yl4579/AuxiliaryASR](https://github.com/yl4579/AuxiliaryASR) at [mesolitica/AuxiliaryASR-Phonemizer](https://github.com/mesolitica/AuxiliaryASR-Phonemizer) to use `ms` phonemizer and trained on [mesolitica/tts-combine-annotated](https://huggingface.co/datasets/mesolitica/tts-combine-annotated) dataset
+- **[ASR](Utils/ASR) folder**: Forked original [yl4579/AuxiliaryASR](https://github.com/yl4579/AuxiliaryASR) at [malaysia-ai/AuxiliaryASR-Phonemizer](https://github.com/malaysia-ai/AuxiliaryASR-Phonemizer) to use `ms` phonemizer and trained on [mesolitica/tts-combine-annotated](https://huggingface.co/datasets/mesolitica/tts-combine-annotated) dataset
 - **[JDC](Utils/JDC) folder**: No modification done, use original [yl4579/PitchExtractor](https://github.com/yl4579/PitchExtractor).
-- **[PLBERT](https://github.com/yl4579/StyleTTS2/tree/main/Utils/PLBERT) folder**: Forked original [PL-BERT](https://arxiv.org/abs/2301.08810) at [mesolitica/PL-BERT-MS](https://github.com/mesolitica/PL-BERT-MS) to use custom word tokenizer and pretrained on Malay Wikipedia and local news. Check how we pruned checkpoint at [prune-checkpoint.ipynb](prune-checkpoint.ipynb).
+- **[PLBERT](https://github.com/yl4579/StyleTTS2/tree/main/Utils/PLBERT) folder**: Forked original [PL-BERT](https://arxiv.org/abs/2301.08810) at [malaysia-ai/PL-BERT-MS](https://github.com/malaysia-ai/PL-BERT-MS) to use custom word tokenizer and pretrained on Malay Wikipedia and local news. Check how we pruned checkpoint at [prune-checkpoint.ipynb](prune-checkpoint.ipynb).
 
 ## Dataset preparation
 
